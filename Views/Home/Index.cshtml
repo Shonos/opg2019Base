@@ -1,8 +1,37 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model opg_201910_interview.Models.HomeViewModel
+@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="container">
+    @if (Model.FilesForEnumeration != null && Model.FilesForEnumeration.Count == 0)
+    {
+        <text>No files read from directory</text>
+    }
+    else
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">File Name</th>
+                    <th scope="col">File Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var file in Model.FilesForEnumeration)
+                {
+                    <tr>
+                        <td>
+                            @(file.FileName)
+                        </td>
+                        <td>
+                            @(file.FileDate)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 </div>

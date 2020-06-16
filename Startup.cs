@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using opg_201910_interview.Models;
 
 namespace opg_201910_interview
 {
@@ -24,6 +25,8 @@ namespace opg_201910_interview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.Configure<ClientSettingsModel>(Configuration.GetSection("ClientSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

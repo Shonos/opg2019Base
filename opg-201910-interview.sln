@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "opg-201910-interview", "opg-201910-interview.csproj", "{5076C788-AE27-4B00-89E8-74DC9CB0D394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opg-2019-interview-daroya-test", "..\opg-2019-interview-daroya-test\opg-2019-interview-daroya-test.csproj", "{D9526CAA-3318-4690-A757-6ECE96D504E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opg_201910-interview-shaun-daroya-unittests", "opg_201910-interview-shaun-daroya-unittests\opg_201910-interview-shaun-daroya-unittests.csproj", "{ABEE845A-3C88-45BC-BA80-92319C7AD40E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9526CAA-3318-4690-A757-6ECE96D504E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9526CAA-3318-4690-A757-6ECE96D504E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9526CAA-3318-4690-A757-6ECE96D504E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9526CAA-3318-4690-A757-6ECE96D504E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

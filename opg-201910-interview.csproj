@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="opg_201910-interview-shaun-daroya-unittests\**" />
+    <Content Remove="opg_201910-interview-shaun-daroya-unittests\**" />
+    <EmbeddedResource Remove="opg_201910-interview-shaun-daroya-unittests\**" />
+    <None Remove="opg_201910-interview-shaun-daroya-unittests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 

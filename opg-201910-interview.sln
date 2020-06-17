@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "opg-201910-interview", "opg-201910-interview.csproj", "{5076C788-AE27-4B00-89E8-74DC9CB0D394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opg_201910-interview-shaun-daroya-unittests", "opg_201910-interview-shaun-daroya-unittests\opg_201910-interview-shaun-daroya-unittests.csproj", "{ABEE845A-3C88-45BC-BA80-92319C7AD40E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5076C788-AE27-4B00-89E8-74DC9CB0D394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEE845A-3C88-45BC-BA80-92319C7AD40E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F032ECD3-9EC7-4EFF-8DE6-492F4B7B5FC6}
+	EndGlobalSection
+EndGlobal

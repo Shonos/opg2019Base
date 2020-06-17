@@ -17,11 +17,6 @@ namespace opg_201910_interview.BusinessLogic
                 throw new ArgumentNullException("ClientBusinessLogic", "Settings where not properly configured");
             }
 
-            if (!Directory.Exists(clientSettings.Value.FileDirectoryPath))
-            {
-                throw new ArgumentNullException("ClientBusinessLogic", string.Format("{0} is not a valid file directory", clientSettings.Value.FileDirectoryPath));
-            }
-
             if (clientSettings.Value.ClientId == 1001)
             {
                 // Client A Instance

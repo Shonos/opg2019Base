@@ -29,7 +29,6 @@ namespace opg_201910_interview.Controllers
             {
                 FilesForEnumeration = ClientFactory.GetClientBusinessLogic(_clientSettings).EnumerateFiles()
             };
-
             return View(model);
         }
 

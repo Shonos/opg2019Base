@@ -22,12 +22,12 @@ namespace opg_201910_interview.BusinessLogic
                 throw new ArgumentNullException("ClientBusinessLogic", string.Format("{0} is not a valid file directory", clientSettings.Value.FileDirectoryPath));
             }
 
-            if (clientSettings.Value.FileDirectoryPath.Contains("ClientA", StringComparison.OrdinalIgnoreCase))
+            if (clientSettings.Value.ClientId == 1001)
             {
                 // Client A Instance
                 return new ClientABusinessLogic(clientSettings);
             }
-            else if (clientSettings.Value.FileDirectoryPath.Contains("ClientA", StringComparison.OrdinalIgnoreCase))
+            else if (clientSettings.Value.ClientId == 2001)
             {
                 // Client B Instance
                 return new ClientBBusinessLogic(clientSettings);

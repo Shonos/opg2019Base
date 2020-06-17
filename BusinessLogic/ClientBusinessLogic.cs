@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -16,19 +18,21 @@ namespace opg_201910_interview.BusinessLogic
         {
             _clientSettings = clientSettings;
         }
+
         public List<FileModel> EnumerateFiles()
         {
             var files = GetFiles();
-            OrderFiles(files);
+            files = OrderFiles(files);
             return files;
         }
 
-        protected virtual void OrderFiles(List<FileModel> files)
+        protected virtual List<FileModel> OrderFiles(List<FileModel> files)
         {
-            
+            // no implementation on base class
+            return files;
         }
 
-        protected virtual List<FileModel> GetFiles()
+        protected List<FileModel> GetFiles()
         {
             var files = new List<FileModel>();
             var filesInDirectory = Directory.GetFiles(_clientSettings.Value.FileDirectoryPath);
@@ -36,8 +40,18 @@ namespace opg_201910_interview.BusinessLogic
             {
                 
                 string fileName = GetFileNameFromFileNameWithDirectory(file);
-                DateTime fileDate = GetFileDateFromFileName(fileName);
+                string exactFileName = GetExactFileName(fileName);
+                DateTime? fileDate = GetFileDateFromFileName(fileName);
 
+                if (!string.IsNullOrEmpty(exactFileName) && fileDate.HasValue) // main way of checking file name validity
+                {
+                    files.Add(new FileModel
+                    {
+                        FileName = fileName,
+                        FileDate = fileDate,
+                        FileExactName = exactFileName
+                    });
+                }
             }
 
             return files;
@@ -45,12 +59,28 @@ namespace opg_201910_interview.BusinessLogic
 
         protected string GetFileNameFromFileNameWithDirectory(string fileWithDirectory)
         {
-            return fileWithDirectory.Replace(_clientSettings.Value.FileDirectoryPath, "");
+            return fileWithDirectory.Replace(_clientSettings.Value.FileDirectoryPath +"\\", "");
         }
 
-        protected DateTime GetFileDateFromFileName(string fileWithDirectory)
+        protected virtual DateTime? GetFileDateFromFileName(string fileName)
         {
+            // base class same logic with client a
+            var m = Regex.Match(fileName, @"\b[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])\b");
+            if (m.Success)
+            {
+                DateTime.TryParseExact(m.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parseResult);
+                return parseResult != null ? (DateTime?)parseResult : null;
+            }
+            else
+            {
+                return null; ;
+            }
+        }
 
+        protected virtual string GetExactFileName(string fileName)
+        {
+            // no implementation on base class
+            return fileName;
         }
     }
 }
